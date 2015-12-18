@@ -1,0 +1,38 @@
+<div id ="root" ng-controller= "rootPage" scroll>
+	<div style="background-image:url('../assets/images/src/headerimage/slider1.jpg');background-size:cover;width:100%;height:650px;text-align:center">
+		<nav class="navbar" style="background-color:black;width:100%;z-index:100" ng-style="myStyle">
+		    <div class="navbar-header" style="height:28px;">
+	      		<a class="navbar-brand" href="#">Liang's Thinkings</a>
+	   		</div>
+		    <div>
+		    	<ul class="nav navbar-nav" style="margin-left:500px;display:inline">
+			        <li ui-sref-active="active"><a><span ui-sref="root.home">Home</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.Html">HTML</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.css"> Contact</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.javascript">Javascript</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.jQuery">jQuery</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.angularJs">AngularJs</span></a></li>
+			        <li ui-sref-active="active"><a><span ui-sref="root.express">Express.js</span></a></li>
+		    	</ul>
+		    </div>
+		</nav>
+		<span style="color:white;position:absolute;top:200px;font-family:'PT Sans';font-size:40px">Welcome to my website,</span><br><div style="width:100%;font-size:60px;font-weight:900;color:white;text-align:center;top:250px;position:absolute"> What a pleasure to meet you!<br><br><button type="button" class="btn btn-default btn-lg"  ui-sref-active="active"><a><span ui-sref="root.home">Know Me About</span></a></button></div>
+		
+	</div>
+	<div ui-view >    	
+	</div>
+	<div style="width:800px;margin-left:auto;margin-right:auto">
+	<br>
+	<br>
+		<form>
+			<fieldset>
+				<legend>Contact:</legend>
+					<input type="text" class="form-control" ng-model="name" placeholder='Name' style="width:100%;margin:0 auto;"><br>
+					<input type="email" class="form-control" ng-model="emailAddress" placeholder='Email' style="width:100%;margin:0 auto;"><br>
+					<textarea class="form-control" ng-model="content" placeholder='Content' style="width:100%;height:250px;margin:0 auto"></textarea>
+			</fieldset>
+			<br>
+			<button type="button" class="btn btn-default btn-md" ng-click="email()" ui-sref-active="active" style="width:120px"><span ui-sref="root.home"> Send </span></button>
+		</form>
+	</div>
+</div>

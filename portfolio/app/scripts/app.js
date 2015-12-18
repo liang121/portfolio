@@ -1,0 +1,41 @@
+var App = angular.module("portfolio",['ui.router','ngCookies','ngAnimate']);
+App.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider
+		.state("login",{
+			url:"/login",
+			templateUrl:"../templates/login.html"
+		})
+		.state("root",{
+			url:"/root",
+			templateUrl:"../templates/root.html"
+		})
+		.state("root.javascript",{
+			url:"/javascript",
+			templateUrl:"../templates/javascript.html"
+		})
+		.state("root.jQuery",{
+			url:"/jQuery",
+			templateUrl:"../templates/jQuery.html"
+		})
+		.state("root.css",{
+			url:"/css",
+			templateUrl:"../templates/css.html"
+		})
+		.state("root.Html",{
+			url:"/Html",
+			templateUrl:"../templates/Html.html"
+		})
+		.state("root.angularJs",{
+			url:"/angularJs",
+			templateUrl:"../templates/angularJs.html"
+		})
+		.state("root.express",{
+			url:"/express",
+			templateUrl:"../templates/express.html"
+		})
+		.state("root.home",{
+			url:"/home",
+			templateUrl:"../templates/home.html"
+		})
+		$urlRouterProvider.otherwise("/root")
+})
